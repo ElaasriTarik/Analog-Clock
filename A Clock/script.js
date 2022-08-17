@@ -1,8 +1,37 @@
 
 let secondHand = document.querySelector('.secondHand');
+let thirdHand = document.querySelector('.thirdHand');
+let container = document.querySelector('.container');
 
+setInterval(function() {
+	let thisTime = new Date();
+	let minutes = thisTime.getMinutes();
+	let newMinute = minutes/2;
+	
+	thisTime.toLocaleString();
+	secondHand.style.transform = `rotate(${((thisTime.getHours()*30)+(90+newMinute))}deg)`;
+ 	
+}, 1000)
+setInterval(function() {
+	let thisTime = new Date();
+	let minutes = thisTime.getMinutes();
+	
+	
+	thisTime.toLocaleString();
+	  thirdHand.style.transform = `rotate(${(minutes*6)+90}deg)`;
+      
+ 	   
+}, 1000)
 
+setInterval(function() {
 
+      const randomColor = Math.floor(Math.random()*999999);
+
+      container.style.boxShadow = '0 0 15px 4px #'+randomColor;
+      container.style.transition = 'all 1s linear ease-in';
+      
+}, 1500)
+/*
 setInterval(function() {
 	let thisTime = new Date();
 	let minutes = thisTime.getMinutes();
@@ -75,4 +104,4 @@ setInterval(function() {
  	 }
  	   
 }, 1000)
-
+*/
