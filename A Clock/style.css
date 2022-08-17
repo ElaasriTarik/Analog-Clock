@@ -147,10 +147,10 @@ main .span4::before {
 main span::before {
 	font-size: 1.5rem;
 }
-.firstHand{
+main .firstHand{
 	position: relative;
-	top: calc(50% + 5px);
-	left: calc(50% - 140px);
+	top: calc(50% + 6px);
+    left: calc(50% - 139px);
 	width: 140px;
 	height: 5px;
     border-top-left-radius: 5px;
@@ -165,17 +165,17 @@ main span::before {
 }
 main .litte_circle {
 	position: relative;
-	width: 8px;
-	height: 8px;
+	width: 10px;
+	height: 10px;
 	border-radius: 500px;
 	background-color: purple;
-	top: calc(50% - 5px);
+	top: calc(50% - 10px);
 	left: calc(50% - 3px);
 }
 main .secondHand {
 	position: relative;
-	top: 50.3%;
-	left: calc(50% - 110px);
+	top: calc(50% - 1px);
+	left: calc(50% - 108px);
 	width: 110px;
 	height: 5px;
     border-top-left-radius: 5px;
@@ -187,6 +187,19 @@ main .secondHand {
     animation-timing-function: linear;
     animation-iteration-count: infinite; 
 
+}
+main .thirdHand{
+	position: relative;
+	top: calc(50% - 3px);
+	left: calc(50% - 125px);
+	width: 125px;
+	height: 5px;
+    
+    animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	background-color: #a7d95e;
+	transform-origin: right;
+	animation-timing-function: linear;
 }
 0% {
 	transform: rotate(0deg);
